@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Ball : MonoBehaviour
+public abstract class Ball : MonoBehaviour, IBallDestroy
 {
     [SerializeField] protected BallData ballData;
     public Vector3 direction { get; set; }
@@ -22,7 +22,7 @@ public abstract class Ball : MonoBehaviour
     }
 
     protected abstract void Move();
-
+    
     private void Update()
     {
         Move();
@@ -30,7 +30,6 @@ public abstract class Ball : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        
         var hittable = collision.gameObject.GetComponent<IHittable>();
 
         if (hittable != null)
@@ -44,5 +43,10 @@ public abstract class Ball : MonoBehaviour
             }
             hittable.OnHit(-direction, this);
         }
+    }
+
+    public void BallDestroy()
+    {
+        Destroy(gameObject);
     }
 }
