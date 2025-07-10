@@ -10,6 +10,8 @@ public class HomerunZone : MonoBehaviour
             Debug.Log("HomeRun!!!!");
             // 주루에 있는 사람 + 1만큼 점수 추가
             ScoreManager.instance.AddScore(ScoreManager.instance.runnersOnBase);
+            GameManager.instance.setUp();
+            UIManager.instance.ScoreText.text = "score: + "+ ScoreManager.instance.score;
         }
     }
 }
