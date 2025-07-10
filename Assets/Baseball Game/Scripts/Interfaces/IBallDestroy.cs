@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IBallDestroy
 {
-    void BallDestroy(GameObject obj);
+    public void BallDestroy();
 }
