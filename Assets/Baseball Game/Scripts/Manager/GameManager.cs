@@ -24,17 +24,21 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        setUp();
+    }
+
+    public void setUp()
+    {
         strikeCount = 0;
         ballCount = 0;
         outCount = 0;
         chances = 1;
-
+        
         // 초기 UI 상태 초기화
         uiManager.UpdateStrike(strikeCount);
         uiManager.UpdateBall(ballCount);
         uiManager.UpdateOut(outCount);
     }
-
     public void AddStrike()
     {
         strikeCount++;
