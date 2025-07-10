@@ -10,6 +10,7 @@ public class HitZone : MonoBehaviour
             Debug.Log("히트다 히트");
             //주루 하나씩 가기
             ScoreManager.instance.PlayerAdvance();
+            GameManager.instance.setUp();
         }
     }
 }
