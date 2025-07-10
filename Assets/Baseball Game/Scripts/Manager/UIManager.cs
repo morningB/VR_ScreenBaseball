@@ -27,6 +27,8 @@ public class UIManager : MonoBehaviour
     private readonly Color outActiveColor = Color.red;
     private readonly Color inactiveColor = new Color(1f, 1f, 1f, 0.3f);
 
+    public Text ScoreText;
+    
     public void UpdateStrike(int count)
     {
         UpdateImagesBrightness(StrikeImages, count, strikeActiveColor);
