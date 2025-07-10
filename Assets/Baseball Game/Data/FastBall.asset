@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5389633a3b3b944148cd1b31f352f5dc, type: 3}
   m_Name: FastBall
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 13
   curveStrength: 0
-  curveDirection: {x: 1, y: 1, z: 1}
+  curveDirection: {x: 0, y: 0, z: 0}
